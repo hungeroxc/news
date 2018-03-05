@@ -32,7 +32,7 @@ class PCHeader extends Component {
             },{
                 key: 'shishang',
                 value: '时尚'
-        },]
+        }]
         return (
             <header>
                 <Row>
