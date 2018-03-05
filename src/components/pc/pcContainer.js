@@ -5,6 +5,8 @@ import Carousel2 from '../../images/carousel2.jpg'
 import Carousel3 from '../../images/carousel3.jpg'
 import Carousel4 from '../../images/carousel4.jpg'
 
+import PCNewsImageBlock from './pcNewsImageBlock'
+
 class PCContainer extends Component {
     render(){
         let setting = {
@@ -27,6 +29,13 @@ class PCContainer extends Component {
                                 <div><img src={Carousel3} alt="picture3" /></div>
                                 <div><img src={Carousel4} alt="picture4" /></div>
                             </Carousel>
+                            <PCNewsImageBlock 
+                                type="guoji" 
+                                count={6} 
+                                width="400px"
+                                cartTitle="国际头条" 
+                                imageWidth="112px"
+                            />
                         </div>
                     </div>
                 </Col>
