@@ -7,7 +7,7 @@ import Carousel4 from '../../images/carousel4.jpg'
 
 import PCNewsImageBlock from './pcNewsImageBlock'
 import PCNewsBlock from './pcNewsBlock'
-
+import PCProduct from './pcProduct'
 
 const TabPane = Tabs.TabPane
 
@@ -60,6 +60,11 @@ class PCContainer extends Component {
                             />
 						</TabPane>
                     </Tabs>
+                    <Tabs className="tabs_product">
+                        <TabPane tab="OXC 产品广告" key="1">
+                            <PCProduct/>
+                        </TabPane>
+					</Tabs>
                     <div>
                         <PCNewsImageBlock count={8} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="132px"/>
 					    <PCNewsImageBlock count={16} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
