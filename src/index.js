@@ -6,21 +6,21 @@ import 'antd/dist/antd.css'
 
 
 import './css/pc.css'
+import PCIndex from './components/pc/pcIndex'
+import PCNewsDetails from './components/pc/pcNewsDetail'
 
+// function MyLoadingComponent() {
+//     return <div></div>
+// }
 
-
-function MyLoadingComponent() {
-    return <div></div>
-}
-
-const PCIndex = Loadable({
-    loader: () => import('./components/pc/pcIndex'),
-    loading: MyLoadingComponent
-})
-const PCNewsDetails = Loadable({
-    loader: () => import('./components/pc/pcNewsDetail'),
-    loading: MyLoadingComponent
-})
+// const PCIndex = Loadable({
+//     loader: () => import('./components/pc/pcIndex'),
+//     loading: MyLoadingComponent
+// })
+// const PCNewsDetails = Loadable({
+//     loader: () => import('./components/pc/pcNewsDetail'),
+//     loading: MyLoadingComponent
+// })
 
 ReactDOM.render(
     <div>
