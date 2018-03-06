@@ -65,11 +65,12 @@ class PCContainer extends Component {
                             <PCProduct/>
                         </TabPane>
 					</Tabs>
-                    <div>
-                        <PCNewsImageBlock count={8} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="132px"/>
-					    <PCNewsImageBlock count={16} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
-                    </div>
+
                 </Col>
+                <div className="clearfix newsCard">
+                    <PCNewsImageBlock  count={8} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="136px"/>
+					<PCNewsImageBlock  count={8} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="136px"/>
+                </div>
             </Row>
         )
     }

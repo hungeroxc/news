@@ -27,6 +27,7 @@ class PCNewsBlock extends Component{
                 textAlign: 'center',
                 minHeight: '610px',
                 width: '400px',
+                height: '410px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
@@ -49,7 +50,7 @@ class PCNewsBlock extends Component{
                 </div>
                 
         return (
-            <div className="topNewsList">
+            <div>
                 <Card>
                     <ul>
                         {list}

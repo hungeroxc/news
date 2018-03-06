@@ -1,3 +1,10 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
 .logo {
     align-items: center;
     display: flex;
@@ -55,11 +62,15 @@
 
 #container {
     text-align: center !important;
+
 }
 
 .container {
     text-align: center;
     margin-top: 5px;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .carousel {
@@ -72,12 +83,21 @@
     height: 260px;
 }
 
+.newsCard {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .topNewsList {
     float: left;
     text-align: left;
     font-size: 14px;
     margin-bottom: 10px;
+    width: 1225px;
 }
+
+
+
 
 .topNewsList a {
     line-height: 22px !important;
@@ -86,15 +106,21 @@
 
 .tabs_news {
     padding-left: 10px;
-    width: 460px;
+    width: 500px;
     float: left;
+    margin-left: 10px;
 }
 
 .tabs_product {
-    width: 300px;
+    width: 315px;
     padding-left: 10px;
     float: left;
 }
+.tabs_product>.ant-tabs-content {
+    border: 1px solid #e8e8e8;
+    margin-top: 5px;
+    height: 625px;
+} 
 
 .tabs_news li {
     height: 27px;
