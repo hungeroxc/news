@@ -1,10 +1,27 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {Row, Col, BackTop} from 'antd'
-import PCHeader from './pcHeader'
-import PCFooter from './pcFooter'
-import PCNewsImageBlock from './pcNewsImageBlock'
+import Loadable from 'react-loadable'
 
+
+function MyLoadingComponent() {
+    return <div></div>
+}
+
+const PCHeader = Loadable({
+    loader: () => import('./pcHeader'),
+    loading: MyLoadingComponent
+})
+
+const PCFooter = Loadable({
+    loader: () => import('./pcFooter'),
+    loading: MyLoadingComponent
+})
+
+const PCNewsImageBlock = Loadable({
+    loader: () => import('./pcNewsImageBlock'),
+    loading: MyLoadingComponent
+})
 
 class PCNewsDetails extends Component {
     constructor(){

@@ -1,13 +1,30 @@
 import React, {Component} from 'react'
 import {Row, Col, Carousel, Tabs} from 'antd'
+import Loadable from 'react-loadable'
 import Carousel1 from '../../images/carousel1.jpg'
 import Carousel2 from '../../images/carousel2.jpg'
 import Carousel3 from '../../images/carousel3.jpg'
 import Carousel4 from '../../images/carousel4.jpg'
 
-import PCNewsImageBlock from './pcNewsImageBlock'
-import PCNewsBlock from './pcNewsBlock'
-import PCProduct from './pcProduct'
+
+
+function MyLoadingComponent() {
+    return <div></div>
+}
+
+const PCNewsImageBlock = Loadable({
+    loader: () => import('./pcNewsImageBlock'),
+    loading: MyLoadingComponent
+})
+
+const PCNewsBlock = Loadable({
+    loader: () => import('./pcNewsBlock'),
+    loading: MyLoadingComponent
+})
+const PCProduct = Loadable({
+    loader: () => import('./pcProduct'),
+    loading: MyLoadingComponent
+})
 
 const TabPane = Tabs.TabPane
 
