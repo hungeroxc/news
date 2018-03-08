@@ -4,9 +4,19 @@ import Carousel2 from '../../images/carousel2.jpg'
 import Carousel3 from '../../images/carousel3.jpg'
 import Carousel4 from '../../images/carousel4.jpg'
 import {Tabs, Carousel} from 'antd'
+import Loadable from 'react-loadable'
 
 
+function MyLoadingComponent() {
+    return <div></div>
+}
+
+const MobileNewsBlock = Loadable({
+    loader: () => import('./mobileNewsBlock'),
+    loading: MyLoadingComponent
+})
 const TabPane = Tabs.TabPane
+
 
 class MobileContainer extends Component {
     render(){
@@ -28,6 +38,7 @@ class MobileContainer extends Component {
                                 <div><img src={Carousel3} alt="p3"/></div>
                                 <div><img src={Carousel4} alt="p4"/></div>
                             </Carousel>
+                            <MobileNewsBlock count={20} type="top"/>
                         </div>
                     </TabPane>
                 </Tabs>
