@@ -26,7 +26,28 @@ class MobileContainer extends Component {
             speed: 500,
             slidesToShow: 1,
             autoplay: true
-        }
+        },
+        list = [{
+            key: '2',
+            count: 20,
+            type: 'shehui',
+            tab: '社会'
+        },{
+            key: '3',
+            count: 20,
+            type: 'guonei',
+            tab: '国内'
+        },{
+            key: '4',
+            count: 20,
+            type: 'guoji',
+            tab: '国际'
+        },{
+            key: '5',
+            count: 20,
+            type: 'yule',
+            tab: '娱乐'
+        }]
         return (
             <div>
                 <Tabs>
@@ -41,6 +62,13 @@ class MobileContainer extends Component {
                             <MobileNewsBlock count={20} type="top"/>
                         </div>
                     </TabPane>
+                    {
+                        list.map(e => {
+                            return <TabPane tab={e.tab} key={e.key}>
+                                <MobileNewsBlock count={e.count} type={e.type}/>
+                            </TabPane>
+                        })
+                    }
                 </Tabs>
             </div>
         )
