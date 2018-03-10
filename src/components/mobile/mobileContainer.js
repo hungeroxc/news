@@ -64,7 +64,7 @@ class MobileContainer extends Component {
                     </TabPane>
                     {
                         list.map(e => {
-                            return <TabPane tab={e.tab} key={e.key}>
+                            return  <TabPane tab={e.tab} key={e.key}>
                                 <MobileNewsBlock count={e.count} type={e.type}/>
                             </TabPane>
                         })
