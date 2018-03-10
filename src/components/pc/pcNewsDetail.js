@@ -23,6 +23,11 @@ const PCNewsImageBlock = Loadable({
     loading: MyLoadingComponent
 })
 
+const Comments = Loadable({
+    loader: () => import('../comments'),
+    loading: MyLoadingComponent
+})
+
 class PCNewsDetails extends Component {
     constructor(){
         super()
@@ -64,7 +69,7 @@ class PCNewsDetails extends Component {
                         </div>
                         <br/>
                         <hr/>
-
+                        <Comments uniquekey={this.props.match.params.uniquekey}/>
                     </Col>
                     <Col span={16}>
                         <div style={{marginLeft: "200px"}}>

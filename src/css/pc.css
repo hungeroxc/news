@@ -97,7 +97,9 @@
 }
 
 
-
+.ant-card-extra {
+    margin: 0;
+}
 
 .topNewsList a {
     line-height: 22px !important;

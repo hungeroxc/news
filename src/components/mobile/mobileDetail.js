@@ -62,7 +62,7 @@ class MobileDetail extends Component {
         </Col>
         :
         <div style={spanStyle}>
-            <Spin size="large"/>
+            <Spin size="large"/> 
         </div>
 
         return (
