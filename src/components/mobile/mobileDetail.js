@@ -17,6 +17,11 @@ const MobileFooter = Loadable({
     loading: MyLoadingComponent
 })
 
+const Comments = Loadable({
+    loader: () => import('../comments'),
+    loading: MyLoadingComponent
+})
+
 class MobileDetail extends Component {
     constructor(){
         super()
@@ -53,6 +58,7 @@ class MobileDetail extends Component {
             <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
             <br/>
             <hr/>
+            <Comments uniquekey={this.props.match.params.uniquekey}/>
         </Col>
         :
         <div style={spanStyle}>
