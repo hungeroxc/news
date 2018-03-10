@@ -73,7 +73,7 @@ class MobileDetail extends Component {
                         {detail}
                     </Row>
                     <MobileFooter />
-                    <BackTop />
+                    <BackTop visibilityHeight={400} />
                 </div>
             </div> 
         )

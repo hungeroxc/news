@@ -15,8 +15,14 @@ class Comments extends Component {
         
         axios.get(url)
         .then(res => {
+            let comment = []
+            if(res.data.length > 20){
+                comment = res.data.splice(0, 20)
+            }else{
+                comment = res.data
+            }
             this.setState({
-                comments: res.data
+                comments: comment
             })
         })
     }
@@ -25,10 +31,11 @@ class Comments extends Component {
             commentList = comments.length > 0
             ?
             comments.map((comment, index) => {
-                return <Card key={index} title={comment.UserName} extra={
-                    <div>
+                return <Card key={index} extra={
+                    <div style={{wordBreak: 'break-word'}}>
+                        <div style={{textAlign: 'left'}}>{comment.UserName}</div>
                         <p>发布于{comment.datetime}</p> 
-                        <p>{comment.Comments}</p>
+                        <p style={{textAlign: 'left'}}>{comment.Comments + '11111111111111111111111111111111111111111111111111'}</p>
                     </div>
                 }></Card>  
             })
