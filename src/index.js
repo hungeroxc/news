@@ -26,6 +26,11 @@ const MobileIndex = Loadable({
     loading: MyLoadingComponent
 })
 
+const MobileDetail = Loadable({
+    loader: () => import('./components/mobile/mobileDetail'),
+    loading: MyLoadingComponent
+})
+
 ReactDOM.render(
     <div>
         <MediaQuery query='(min-device-width: 1224px)'>
@@ -37,7 +42,12 @@ ReactDOM.render(
             </BrowserRouter>
         </MediaQuery>
         <MediaQuery query='(max-device-width: 1224px)'>
-            <MobileIndex/>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={MobileIndex}></Route>
+                    <Route path="/details/:uniquekey" component={MobileDetail}></Route>
+                </Switch>
+            </BrowserRouter>
         </MediaQuery>
     </div>, 
     document.getElementById('root')
