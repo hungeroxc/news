@@ -1,1 +1,2 @@
-123
+npm i
+npm start
